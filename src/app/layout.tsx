@@ -5,7 +5,10 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Toasted Dictionary",
+  title: {
+    default: "Toasted Dictionary",
+    template: "%s | Toasted Dictionary",
+  },
   description: "Your one-stop-shop for any toasted words.",
   themeColor: "#ff7d00",
 };
