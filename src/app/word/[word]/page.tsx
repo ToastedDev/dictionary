@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 type Data = {
@@ -25,6 +26,16 @@ async function fetchData(word: string): Promise<Data | null> {
   );
   if (!res.ok) return null;
   return res.json();
+}
+
+export function generateMetadata({
+  params,
+}: {
+  params: { word: string };
+}): Metadata {
+  return {
+    title: params.word,
+  };
 }
 
 export default async function WordPage({
