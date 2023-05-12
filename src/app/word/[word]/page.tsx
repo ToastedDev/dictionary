@@ -68,7 +68,7 @@ export default async function WordPage({
                   <li key={index}>
                     <p>{definition.definition}</p>
                     {definition.example && (
-                      <p className="opacity-50">
+                      <p className="text-slate-50/50">
                         &quot;{definition.example}&quot;
                       </p>
                     )}
